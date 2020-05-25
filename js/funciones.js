@@ -29,9 +29,9 @@ function obtenerLetraDNI (númeroDNI) {
 																												// (cantidad de letras diferentes en array) del númeroDNI
 }
 
-// Función que genera 10 números de DNI aleatorios junto a su correspondiente letra y almacena en variable global DNI_DB
+// Función que genera números de DNI aleatorios junto a su correspondiente letra y almacena en variable global DNI_DB
 function generarDNI (cantidad) {
-	let númerosAGenerar = cantidad || 10; // Cantidad de números de DNI con letra que queremos generar, por defecto 10
+	let númerosAGenerar = cantidad || 1; // Cantidad de números de DNI con letra que queremos generar, por defecto 1
 
 	console.info (`Generando ${númerosAGenerar} número(s) de DNI con su letra correspondiente...`)
 
@@ -47,7 +47,7 @@ function generarDNI (cantidad) {
 
 // Función principal
 function ayudaAPolicía () {
-	generarDNI (); // Generamos 10 números con su respectiva letra
+	generarDNI (10); // Generamos 10 números con su respectiva letra
 	console.info ('Mostrando número(s)...');
 
 	DNI_DB.forEach (function (DNI){ // Iteramos entre los diferentes valores
