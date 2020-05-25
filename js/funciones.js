@@ -60,4 +60,6 @@ function ayudaAPolicía () {
 
 ayudaAPolicía (); // Llamamos a la función principal con la intención de obtener 10 números de DNI con su letra
 
+/** obtenerLetraDNI (12345678) */ // Devuelve la letra que corresponde al número dado
+
 /** console.log (DNI_DB) */ // Muestra los datos de DNI generados y almacenados en variable global
