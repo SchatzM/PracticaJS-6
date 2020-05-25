@@ -42,13 +42,13 @@ function generarDNI (cantidad) {
 		DNI_DB[número] = new DNI (númeroDNI, letraDNI); // Almacenamos el resultados en variable global
 	};
 
-	return console.info ('Números generados.');
+	return console.info ('Número(s) generado(s).');
 }
 
 // Función principal
 function ayudaAPolicía () {
 	generarDNI (); // Generamos 10 números con su respectiva letra
-	console.info ('Mostrando números...');
+	console.info ('Mostrando número(s)...');
 
 	DNI_DB.forEach (function (DNI){ // Iteramos entre los diferentes valores
 		// Mostramos en consola los resultados
