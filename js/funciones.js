@@ -13,6 +13,7 @@ function DNI (número, letra) {
 	this.número = número;
 	this.letra = letra;
 }
+
 // Función para generar números de 8 cifras aleatorios para usarlos como número DNI
 function generarNúmerosDNI () {
 	return	Math.random() // Genera un número aleatorio
@@ -23,9 +24,9 @@ function generarNúmerosDNI () {
 // Función para obtener la letra correspondiente al número de DNI dado
 function obtenerLetraDNI (númeroDNI) {
 	const ordenLetras = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T"]; // Letras posibles para DNI en orden especificado
-	return ordenLetras[númeroDNI % (ordenLetras.length-1) /** Obviamos la última letra, la cual se repite */]; // Obtenemos de array 'ordenletras' la letra correspondiente
-															// según el resto de la operación módulo 23
-															// (cantidad de letras diferentes en array) del númeroDNI
+	return ordenLetras[númeroDNI % (ordenLetras.length-1) /** Obviamos la última letra, la cual se repite */];	// Obtenemos de array 'ordenletras' la letra correspondiente
+																												// según el resto de la operación módulo 23
+																												// (cantidad de letras diferentes en array) del númeroDNI
 }
 
 // Función que genera 10 números de DNI aleatorios junto a su correspondiente letra y almacena en variable global DNI_DB
@@ -44,6 +45,7 @@ function generarDNI (cantidad) {
 	return console.info ('Números generados.');
 }
 
+// Función principal
 function ayudaAPolicía () {
 	generarDNI (); // Generamos 10 números con su respectiva letra
 	console.info ('Mostrando números...');
@@ -56,7 +58,7 @@ function ayudaAPolicía () {
 	return console.info ('Fin.');
 }
 
- // LLamamos a la función principal
+// LLamamos a la función principal
 
 ayudaAPolicía (); // Llamamos a la función principal con la intención de obtener 10 números de DNI con su letra
 
